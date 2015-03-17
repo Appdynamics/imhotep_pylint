@@ -9,7 +9,7 @@ log = logging.getLogger(__name__)
 class PyLint(Tool):
     response_format = re.compile(r'(?P<filename>.*):(?P<line_num>\d+):'
                                  '(?P<message>.*)')
-    pylintrc_filename = '.pylintrc'
+    pylintrc_filename = 'pylint.rcfile'
 
     def get_file_extensions(self):
         return ['.py']
