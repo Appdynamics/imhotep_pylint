@@ -58,7 +58,7 @@ class PyLint(Tool):
         retval = defaultdict(lambda: defaultdict(list))
         extensions = ' -o '.join(['-name "*%s"' % ext for ext in
                                   self.get_file_extensions()])
-        log.debug("Here's the files passed in: %s", str(filenames))
+        log.debug("Here's the files passed in: %s", filenames)
         for filename in filenames:
             cmd = 'find %s/%s | xargs %s' % (
                 dirname, filename, self.get_command(
